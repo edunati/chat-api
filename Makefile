@@ -45,9 +45,6 @@ build_clean:
 clean: build_clean dist_clean
 	@rm -rf ${ENV} dist build __pycache__ *.egg-info
 
-docker: wheel
-	@docker-compose up 
-
 mypy:
 	@mypy $(PROJECT_NAME)
 
@@ -56,3 +53,10 @@ lint:
 
 test: lint
 	@py.test
+
+docker: build_clean dist_clean wheel
+	@docker build -t chat-api:${PACKAGE_VERSION} .
+	@docker tag chat-api:${PACKAGE_VERSION} chat-api:latest
+
+docker_local: build_clean dist_clean wheel
+	@docker-compose up
