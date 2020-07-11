@@ -8,7 +8,7 @@
   * redis
 
 ## Run:
-`make docker`
+`make docker_local`
 
 ## Go to:
 `http://localhost:8080/graphiql`
