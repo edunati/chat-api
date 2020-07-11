@@ -13,16 +13,16 @@ def read_version():
 
 install_requires = [
     'aiohttp==3.6.2',
-    'aiopg[sa]',
-    'aiohttp_graphql',
-    'aioredis',
-    'aiodataloader',
-    'trafaret_config',
+    'aiopg[sa]==1.0.0',
+    'aiohttp_graphql==1.1.0',
+    'aioredis==1.3.1',
+    'aiodataloader==0.2.0',
+    'trafaret_config==2.0.2',
     'graphene==2.1.8',
     'graphql-core==2.3.2',
-    'graphql-ws',
-    'psycopg2-binary',
-    'Faker',
+    'graphql-ws==0.3.1',
+    'psycopg2-binary==0.1.1',
+    'Faker==4.1.1',
 ]
 
 
