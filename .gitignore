@@ -1,2 +1,7 @@
 .env/
 .vscode/
+
+build/
+dist/
+graph.egg-info/
+redis-vol/

@@ -43,7 +43,7 @@ class UserGender(Enum):
     TransgenderFemale = 'TransgenderFemale'
     TransgenderMale = 'TransgenderMale'
     TransgenderMan = 'TransgenderMan'
-    TransgenderPerson = 'Transgender Person'
+    TransgenderPerson = 'TransgenderPerson'
     TransgenderWoman = 'TransgenderWoman'
     Transmasculine = 'Transmasculine'
     Transsexual = 'Transsexual'
