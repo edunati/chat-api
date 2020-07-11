@@ -1,5 +1,12 @@
 # Chat API
 
+  * aiohttp
+  * docker
+  * graphql
+  * mypy
+  * postgres
+  * redis
+
 ## Run:
 `make docker`
 
