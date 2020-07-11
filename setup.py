@@ -12,7 +12,7 @@ def read_version():
 
 
 install_requires = [
-    'aiohttp',
+    'aiohttp==3.6.2',
     'aiopg[sa]',
     'aiohttp_graphql',
     'aioredis',

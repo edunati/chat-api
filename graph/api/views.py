@@ -56,6 +56,7 @@ async def subscriptions(request: web.Request) -> web.WebSocketResponse:
     '''
     Handler creates socket connections with apollo client to check
     subscriptions.
+    https://www.howtographql.com/graphql-js/7-subscriptions/
     '''
     ws = web.WebSocketResponse(protocols=('graphql-ws',))
     await ws.prepare(request)
