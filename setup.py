@@ -21,7 +21,7 @@ install_requires = [
     'graphene==2.1.8',
     'graphql-core==2.3.2',
     'graphql-ws==0.3.1',
-    'psycopg2-binary==0.1.1',
+    'psycopg2-binary==2.8.5',
     'Faker==4.1.1',
 ]
 
