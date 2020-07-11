@@ -1,0 +1,52 @@
+version: '3.2'
+
+services:
+  postgres:
+      image: postgres:10
+      container_name: postgres
+      networks:
+        - net
+      environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=postgres
+          - POSTGRES_DB=postgres
+      ports:
+          - 5433:5432
+      volumes:
+          - postgres:/var/lib/postgresql/data
+
+  api:
+      build: .
+      container_name: api
+      volumes:
+          - ./graph:/usr/graph
+      ports:
+          - 8080:8080
+      networks:
+          - net
+
+      depends_on:
+          - postgres
+          - redis
+      links:
+          - postgres
+          - redis
+        
+
+  redis:
+    image: redis:4
+    container_name: redis
+    networks:
+        - net
+    ports:
+        - 6379:6379
+    volumes:
+        - ./redis-vol:/data 
+
+
+volumes:
+    postgres:
+    redis:
+    
+networks:
+    net:
