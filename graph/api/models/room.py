@@ -53,7 +53,7 @@ class Room(graphene.ObjectType):
     )
     messages = graphene.List(
         Message,
-        description='Chat Room messages.',
+        description='Chat room messages.',
     )
 
     async def resolve_owner(self, info: ResolveInfo) -> List[RowProxy]:

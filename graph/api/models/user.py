@@ -15,7 +15,7 @@ class User(graphene.ObjectType):
         description='username of user',
     )
     email = graphene.String(
-        description='username of user',
+        description='email of user',
     )
     avatar_url = graphene.String(
         description='main user`s photo',
